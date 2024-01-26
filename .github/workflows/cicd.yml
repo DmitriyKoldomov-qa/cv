@@ -6,7 +6,6 @@ on:
   pull_request:
     types: [opened, reopened]
   workflow_dispatch:
-
 jobs:
   build:
     name: Уведомление и валидация
@@ -21,7 +20,7 @@ jobs:
           ${{ github.actor }} создал новый коммит: ${{ github.event.commits[0].message }}
           Ссылка на коммит: https://github.com/${{ github.repository }}/commit/${{github.sha}}
           Репозиторий: https://github.com/${{ github.repository }}
-            
+        
           CI/CD github actions: https://github.com/${{ github.repository }}/actions
           https://github.com/${{ github.repository }}/actions/runs/${{github.run_id}}
     - name: Checkout
